@@ -1,0 +1,132 @@
+﻿
+
+.owl-carousel .owl-stage-outer {
+    overflow: inherit !important;
+    padding-top: 20px;
+}
+
+.owl-nav {
+    position: absolute;
+    left: 180px;
+    top: -45px;
+}
+
+    .owl-nav button {
+        display: block;
+        float: left;
+        outline: none !important;
+    }
+.cartList ul li:last-child {
+    margin-bottom:0 !important;
+}
+
+.owl-nav button span {
+    width: 30px;
+    height: 30px;
+    line-height: 24px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 6px;
+    display: block;
+    margin-left: 10px;
+    background: #FFFFFF;
+    color: #0161A0 !important;
+    border: 1px solid #E7F0F6;
+    box-shadow: 0 10px 20px 0 rgba(1,97,160,0.10);
+}
+
+        .owl-nav button:hover span {
+            background: #0161A0;
+            color: #fff !important;
+            border: 1px solid #0161A0;
+        }
+
+.owl-dots {
+    display: none;
+}
+
+.dcSecond {
+    margin-top: 50px;
+}
+
+.linechartfinal {
+    width: 300px;
+}
+
+
+.scrollbar-inner > .scroll-element.scroll-y {
+    width: 6px !important;
+}
+
+ul.portfolioShare li{
+    float: left !important;
+    border-radius: 15px !important;
+    margin-right: 20px !important;
+    text-align: center !important;
+    padding: 25px 20px 10px !important;
+}
+
+#contracts {
+    background: transparent !important;
+    color: #fff;
+    border: 1px solid #fff;
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 18px;
+    height: 36px;
+    margin: 15px auto 0 auto;
+    padding: 0 10px;
+    font-size: 13px;
+    position: relative;
+    z-index: 999;
+}
+    #contracts option {
+        background: #03243a !important;
+    }
+
+
+
+.cartBox .scroll-element.scroll-y.scroll-scrolly_visible {
+    opacity: 0 !important;
+}
+.cartBox:hover .scroll-element.scroll-y.scroll-scrolly_visible {
+    opacity: 1 !important;
+    
+}
+
+.cartBox ul {
+    padding:0 !important;
+    margin:0 !important;
+
+}
+
+/*.accordion {
+    background-color: transparent;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    width:30px;
+    height:auto;
+    position:absolute !important
+}
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}*/
+
+.questionImage {
+    width:30px;
+    height:30px;
+    position:relative;
+}
+
+.sidebarLi {
+    background-color: #0170b3;
+}
+

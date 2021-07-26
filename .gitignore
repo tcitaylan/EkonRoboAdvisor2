@@ -1,0 +1,33 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/packages/System.ComponentModel.Annotations.4.7.0
+/.vs/RoboAdvisor
+/RoboAdvisorApi/obj
+/RoboAdvisorApi/bin/Debug
+/Helpers/obj/Debug
+/Helpers/bin/Debug
+/Helpers/obj/Release
+/Helpers/bin/Release
+/RoboAdvisorApi/Properties/PublishProfiles
+/DataFillerRobo/obj/Debug
+/DataFillerRobo/bin/Debug
+/packages/Newtonsoft.Json.12.0.3
+/DataFillerRobo/obj/Release
+/RoboAdvisorApi/Yıldız Pazar (Yıldız Pazar hisseleri) Backtest.csv
+/RoboAdvisorApi/VARLIK GRUBU (VARLIK GRUBU) Backtest.csv
+/RoboAdvisorApi/Teknoloji Sepeti (BIST Teknoloji hisseleri) Backtest.csv
+/RoboAdvisorApi/Kategori 2 (Sepet 2) Backtest.csv
+/RoboAdvisorApi/Kategori 2 (Sepet 1) Backtest.csv
+/RoboAdvisorApi/Kategori 1 (Sepet 2) Backtest.csv
+/RoboAdvisorApi/Kategori 1 (Sepet 1) Backtest.csv
+/RoboAdvisorApi/Helal Sepet (Faiz getirili nakit - Piyasa değeri yüzde 30 dan küçük hisseler) Backtest.csv
+/RoboAdvisorApi/Finans Sepeti (BIST  Bankalar ve aracı kurumlar hisseleri) Backtest.csv
+/RoboAdvisorApi/Enerji Sepeti (BIST Elektrik Gaz ve Su hisseleri) Backtest.csv
+/RoboAdvisorApi/BIST50 (BIST50 hisseleri) Backtest.csv
+/RoboAdvisorApi/BIST30 (BIST30) Backtest.csv
+/RoboAdvisorApi/BIST100 (BIST100 hisseleri) Backtest.csv
+/RoboAdvisorApi/Ana Pazar (Ana Pazar hisseleri) Backtest.csv
+/RoboAdvisorApi/bin/Release/netcoreapp3.0/publish
+/RoboAdvisorApi/bin/Release/netcoreapp3.1

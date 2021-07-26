@@ -1,0 +1,13 @@
+.graph {
+  display: block;
+  width: 370px !important;
+  height:150px !important;
+}
+
+.eski {
+  color: #4f5ec7 !important;
+  
+}
+.yeni {
+  color: #9ed36a !important;
+}

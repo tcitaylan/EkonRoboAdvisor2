@@ -1,0 +1,77 @@
+
+<div class="pdContainer opc" id='pdc'>
+
+  <div class="dashboardContainer">
+    <div class="dashboardTitle animated fadeInUp">
+      <h2>İşlem Özeti Onayı - {{im.basketName}}</h2>
+      <span>Toplam Birikiminiz: <b>{{selectedContAmount}}<b>TL</b></b></span>
+      <span class="dashboardInfo">
+        Bu sözleşme için bu işlemden sonra 5 adet daha değişiklik yapabilirsiniz.
+      </span>
+    </div>
+  </div>
+
+  <owl-carousel-o [options]="customOptions1">
+    <ng-container *ngFor="let item of im.symbolList; let i=index">
+      <ng-template carouselSlide>
+        <ul class="portfolioShare animated delay-1s img-responsive owlheight">
+          <li class='animated fadeInRight delay-{{i}}s marginreduce'>
+            <div>
+              <span><b>%</b>{{item.price / selectedContAmount * 100 | number:'1.0-0'}}</span>
+              <p>{{item.price | number:'1.0-0':'tr' }}<b>₺</b></p>
+              <div id="slidingtext" class="row">
+                <div class=" overflow-hidden slidetext">
+                  <i class="col-12"
+                     style="display:inline-block; text-overflow:ellipsis; white-space: nowrap; padding-left:55px !important">
+                    {{item.name}}
+                  </i>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </ng-template>
+    </ng-container>
+  </owl-carousel-o>
+
+  <div class="dashboardSettings">
+    <div class="dashboardTitle animated fadeInUp delay-2s">
+      <h2>Ayarlar</h2>
+    </div>
+    <form #loginForm="ngForm" role="form" id="contact_form" (ngSubmit)="approval()">
+      <div id="loading"></div>
+      <div class="settingsArea animated fadeInUp delay-22s">
+        <div class="settingsItem">
+          <span>Birikim Değişimi<p>Birikimleriniz değer kazandıkça bildirim alabilirsiniz.</p></span>
+          <div id="percentage" class="settingsOptions optionRadio2">
+            <span id="yuzde5" (click)="notificationOptions($event)" value="5">%5</span>
+            <span id="yuzde10" (click)="notificationOptions($event)" value="10">%10</span>
+            <span id="yuzde15" (click)="notificationOptions($event)" value="15">%15</span>
+          </div>
+        </div>
+        <div class="settingsItem">
+          <span>İletişim Tercihleri<p>Bildirimlerinizi almak istediğiniz iletişim araçlarını seçiniz.</p></span>
+          <div class="settingsOptions" id="notification">
+            <span id="Sms" (click)="notificationOptionsMulti($event)">SMS</span>
+            <span id="Email" (click)="notificationOptionsMulti($event)">E-POSTA</span>
+          </div>
+        </div>
+        <div class="settingsItem">
+          <span>Tavsiye Değişiklikleri<p>Birikim dağılımlarınız ile ilgili tavsiye değişiklikleri onayınıza sunulsun mu?</p></span>
+          <div class="settingsOptions optionRadio" id="rebalance">
+            <span id="Evet" (click)="notificationOptions($event)" [ngClass]="agree.checked ? 'bsActive' : '' ">EVET</span>
+            <span id="Hayır" (click)="notificationOptions($event)">HAYIR</span>
+          </div>
+        </div>
+      </div>
+      <div class="settingsRules animated fadeInUp delay-24s">
+        <i (click)="agreement($event)"></i><a href="#">Kullanım koşullarını</a> ve <a href="#">sözleşme şartlarını</a> okudum ve onaylıyorum.
+      </div>
+      <div class="settingsButtons  animated fadeInUp delay-24s">
+        <button routerLink='/home' class="buttonCancel">VAZGEÇ</button>
+        <button type="submit" class="buttonSuccess" id="save" disabled="disabled">ONAYLIYORUM</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="pageInfoText">Burada yer alan yatırım bilgi, yorum ve tavsiyeleri "Yatırım Danışmanlığı" kapsamında değildir. Yatırım danışmanlığı hizmeti, Aracı Kurumlar, Portföy yönetim şirketleri, mevduat kabul etmeyen bankalar ile müşteri arasında imzalanacak yatırım danışmanlığı sözleşmesi çerçevesinde sunulmaktadır. Burada yer alan yorum ve tavsiyeler, yorum ve tavsiyede bulunanların kişisel görüşlerine ve/veya firma tarafından üretilen istatistik ve veri analizi programlarının çıktılarına dayanmaktdır. Bu görüşler mali durumunuz ile risk ve getiri tercihlerinize uygun olmayabilir. Bu nedenle, sadece burada yer alan bilgilere dayanılarak yatırım kararı verilmesi beklentilerinize uygun sonuçlar doğurmayabilir.</div>

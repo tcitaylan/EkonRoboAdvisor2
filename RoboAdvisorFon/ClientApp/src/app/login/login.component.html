@@ -1,0 +1,57 @@
+
+<div class="questionPage" id="questionPage">
+  <div class="backgroundContainer animated fadeInLeft">
+    <div class="gtco-container">
+      <div class="row">
+        <div class="col-md-4">
+
+          <div class="bcLogo"></div>
+
+        </div>
+        <div class="col-md-6">
+          <div class="loginPanel">
+            <div class="loginPanelTitle">
+              <div class="loginİnner">
+                <span class="sign-in" [ngClass]="{'borderLine': !registerMode}" (click)="cancelRegisterMode(false)">GİRİŞ YAP</span>
+                <span class="register" [ngClass]="{'borderLine': registerMode}" (click)="registerToggle()">KAYIT OL</span>
+              </div>
+            </div>
+            <div class="loginPanelContent">
+              <div class="loginPanelForm">
+                <div *ngIf="!registerMode" class="form-group">
+
+                  <form #loginForm="ngForm" role="form" id="contact_form" (ngSubmit)="login()">
+                    <div class="form-group">
+                      <div class="loginFormInput">
+                        <input type="text" class="form-control" placeholder="E-Posta" id="username" required name="Email" [(ngModel)]="model.Email">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="loginFormInput">
+                        <input type="password" class="form-control" placeholder="Şifre" id="password" required name="password" autocomplete="off" [(ngModel)]="model.password">
+                      </div>
+                    </div>
+                    <div class="loginFormInput">
+                      <button type="submit" class="loginFormButton" id="postbutton">GİRİŞ YAP</button>
+                    </div>
+                    <!-- <botdetect-captcha captchaStyleName="yourFirstCaptchaStyle"></botdetect-captcha>
+                    <input id="yourFirstCaptchaUserInput"
+                        name="yourFirstCaptchaUserInput"
+                        ngModel
+                        #yourFirstCaptchaUserInput="ngModel"
+                        type="text" > -->
+                  </form>
+
+                </div>
+                <div *ngIf="registerMode" class="form-group">
+                  <app-register (registerMode)="cancelRegisterMode($event)"></app-register>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="loading-main" class="loading hide"></div>

@@ -1,0 +1,308 @@
+﻿@charset "UTF-8";
+
+@media only screen and (max-width: 600px) {
+    .questionPage {
+        width: 100% !important;
+        height: 100% !important;
+        margin: 0 !important;
+    }
+
+    .backgroundContainer {
+        width: 100% !important;
+        height: 100% !important;
+        border-radius: 0 !important;
+    }
+
+    .surveyContainer {
+        width: 96% !important;
+        height: auto !important;
+        margin: 0 2% !important;
+        border-radius: 10px !important;
+        top: 90px !important;
+    }
+
+    .bcLogo {
+        background-size: auto 180% !important;
+        width: 100% !important;
+        height: 60px !important;
+        margin-top: 5px !important;
+    }
+
+    .bcSteps {
+        top: 70px !important;
+        right: 2% !important;
+    }
+
+        .bcSteps li {
+            font-size: 1px !important;
+            line-height: 10px !important;
+            width: 10px !important;
+            margin-left: 5px !important;
+        }
+
+    .scButton {
+        position: initial !important;
+        right: 0 !important;
+        margin: 20px auto 40px;
+        width: 60px !important;
+        height: 60px !important;
+    }
+
+    .scQuestion {
+        width: 100% !important;
+        padding: 30px !important;
+        font-size: 20px !important;
+        line-height: normal !important;
+        text-align: center;
+    }
+
+    .scAnswers {
+        position: initial !important;
+        padding: 10px !important;
+        margin: 10px 20px;
+    }
+
+    .scaItem {
+        width: 100% !important;
+        padding: 15px !important;
+        line-height: 20px !important;
+        height: auto !important;
+    }
+
+    .pageInfoText {
+        width: 90% !important;
+        margin: 20px 5% !important;
+        letter-spacing: 0 !important;
+        line-height: normal !important;
+    }
+
+    .pageDashboard {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+    .mainLogo {
+        background: url("../img/logoDashboard-mobile.png") no-repeat center center !important;
+        width: 100% !important;
+        background-size: 250px auto !important;
+        z-index: 999;
+    }
+
+    .pdSidebar {
+        width: 100% !important;
+        border-radius: 0 !important;
+        position: relative !important;
+        height: auto !important;
+        bottom: 0 !important;
+        padding: 90px 20px 30px 20px;
+    }
+
+    .sidebarName {
+        width: 100% !important;
+        margin: 0 !important;
+        position: relative !important;
+        z-index: 999 !important;
+    }
+
+    ul.sidebarCircles {
+        width: 170px !important;
+        margin-top: 20px !important;
+        z-index: 999 !important;
+        position: relative !important;
+    }
+
+        ul.sidebarCircles li:nth-child(2) {
+            margin: 0 10px !important;
+        }
+
+        ul.sidebarCircles li {
+            width: 50px;
+            height: 50px;
+        }
+
+            ul.sidebarCircles li span {
+                width: 50px !important;
+                height: 50px !important;
+                border-width: 3px !important;
+                line-height: 50px !important;
+            }
+
+            ul.sidebarCircles li img {
+                width: 40px !important;
+                height: 40px !important;
+            }
+
+    .sidebarName h4 {
+        font-size: 12px !important;
+    }
+
+    .sidebarName h2 {
+        font-size: 18px !important;
+    }
+
+    .pdContainer {
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        border-radius: 0 !important;
+    }
+
+    .portfolioCompare {
+        position: initial !important;
+    }
+
+    .dashboardPortfolioChart {
+        width: 94% !important;
+        margin: 0 3% !important;
+    }
+
+    .dashboardTitle {
+        margin: 25px 6% !important;
+    }
+
+    .portfolioCompare {
+        width: 100% !important;
+        margin: 20px 0 !important;
+    }
+
+    .linechartlist {
+        padding-left: 5%;
+        margin-bottom: 7px;
+    }
+
+    #line-chart {
+        width:  90% !important;
+        margin: 0 5% !important;
+        height:150px !important;
+    }
+
+    .linechartlist span {
+        font-size: 11px !important;
+        margin-bottom: 5px;
+    }
+
+    .dashboardContainer:nth-child(2) {
+        margin-top: -30px !important;
+    }
+
+    .cartList {
+        height: 170px !important;
+    }
+
+    .cartBox {
+        width: 90% !important;
+        margin: 0 5% 20px !important;
+        height: 420px !important;
+    }
+    .cartList ul {
+        width:100%;
+    }
+
+    .owl-nav {
+        display: none !important;
+    }
+
+    .sidebarLetter {
+        z-index: 99 !important;
+        line-height: 200px !important;
+        height: 200px !important;
+        font-size: 200px !important;
+        position: absolute !important;
+        bottom: -30px !important;
+        right: -10px !important;
+        left: initial !important;
+    }
+
+    .sidebarCharacter {
+        width: 80px !important;
+        height: auto !important;
+    }
+
+    .dashboardTitle span.dashboardInfo {
+        height: auto !important;
+        line-height: 20px !important;
+        padding: 10px 15px 10px 40px !important;
+        text-align: left !important;
+        font-size: 13px;
+        margin: 10px 0 !important;
+    }
+    ul.portfolioShare li {
+        margin:50px 0 30px !important;
+    }
+    .portfolioShare {
+        padding: 0 !important;
+        white-space: nowrap !important;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        margin: 0 !important;
+    }
+        .portfolioShare .owl-stage-outer {
+            padding:0 20px !important;
+        }
+
+        .portfolioShare li {
+            display: inline-block !important;
+            float: inherit !important;
+            margin: 60px 0;
+        }
+
+    .settingsOptions {
+        position: initial !important;
+        margin: 10px 0 0 0 !important;
+        display: inline-block !important;
+    }
+
+        .settingsOptions span {
+            margin: 0 5px 0 0 !important;
+        }
+
+    .settingsRules {
+        margin: 30px !important;
+    }
+
+    .settingsButtons {
+        margin: 20px !important;
+        float: inherit !important;
+        display: inline-block !important;
+    }
+
+    .buttonCancel, .buttonSuccess {
+        padding: 0 30px !important;
+        font-size: 16px !important;
+    }
+
+    .dashboardTimeline span {
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 5px 0 5px 5% !important;
+    }
+
+        .dashboardTimeline span strong {
+            display: none !important;
+        }
+
+        .dashboardTimeline span i {
+            float: left;
+        }
+
+        .dashboardTimeline span p {
+            width: 100% !important;
+            position: initial !important;
+            padding: 8px 0 0 60px !important;
+            margin: 0 !important;
+            font-size: 15px !important;
+            line-height: 20px !important;
+        }
+
+    div#linechartlistdiv {
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: -55px;
+        width: auto;
+    }
+    .generalislemler {
+        display: contents;
+    }
+
+}

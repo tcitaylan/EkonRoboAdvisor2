@@ -1,0 +1,126 @@
+<!-- <div id="loading" class="loading"></div> -->
+
+<div id="tutorial" class="hide" style="width: 100%; height: 90vh;position: absolute;z-index: 10000000;border-radius: 15px !important;z-index:100000">
+
+  <div style="width:500px;height:300px;margin:0 auto;position:relative;background:white;margin-top:20vh;border-radius:15px">
+
+    <div id="slide1">
+      <div style="padding: 20px;">
+        <img (click)="onClose($event)" src="..\assets\img\cancel.png" style="width: 20px; position: absolute; right: 15px; cursor: pointer; top: 15px;" />
+        <h4 style="margin-top:0">Hoşgeldiniz,</h4>
+        <p>Şimdi seçim yapma sırası sizde. Önerilen Sepetler bölümünden size uygun sepeti seçin.</p>
+        <p style="width: 225px;text-align: justify;">Sepette bulunan varlıklar daire grafiğinin altında listelenir. Bu varlıklar zaman için piyasa koşullarına bağlı olarak değişebilir.</p>
+        <button (click)="onDevam($event)" class="cartButton" tabindex="0" style="width: 200px;height: 40px;line-height: 20px;">Devam</button>
+      </div>
+      <img src="..\assets\img\slide1.png" style="width: 240px;position: absolute;bottom: 0;right: 0;border-radius: 15px;" />
+    </div>
+    <div id="slide2" class="hide">
+      <div style="padding: 20px;">
+        <img src="..\assets\img\cancel.png" style="width: 20px; position: absolute; right: 15px; cursor: pointer; top: 15px;" (click)="onClose($event)" />
+        <h4 style="margin-top:0">Sepet Seçimi Yaparken</h4>
+        <p>Sepetinizi seçerken sağ üst bölümde bulunan grafikte sepetinizin geçmiş dönemde ne kadar kazandırdığını görebilirsiniz.</p>
+        <p style="width: 270px;text-align: justify;">Riskli yatırım araçları içeren sepetlerde yüksek kazanç elde edebileceğiniz gibi zarar etme olasılığınız olduğunu da unutmayın.</p>
+        <button (click)="onClose($event)" class="cartButton" tabindex="0" style="width: 200px;height: 40px;line-height: 20px;">Bitir</button>
+      </div>
+      <img src="..\assets\img\slide2.png" style="width: 190px;position: absolute;bottom: 0;right: 0;border-radius: 15px;" />
+    </div>
+  </div>
+
+</div>
+
+
+<div class="pdContainer opc" id='pdc'>
+  <div class="dashboardContainer">
+    <div class="dashboardTitle animated fadeInUp">
+      <h2>Varlık Özetiniz</h2>
+      <span>Toplam Birikiminiz: <b id="portamount">{{selectedContAmount}} TL</b></span>
+    </div>
+    <div class="dashboardPortfolioChart animated fadeInUp delay-03s">
+      <div class="dpcItem dpcCurrent dpcItemone" id="dpcItemone">
+        <p class="animated flipInY" id="yuzdekırk">{{selectedContAmount* 0.4 | number:'':'tr' }} TL<b>{{ first }}</b></p>
+        <span (click)="changeSelect($event)">%40</span>
+      </div>
+      <div class="dpcItem dpcItemtwo">
+        <p class="animated flipInY" id="yuzdeotuzbes">{{selectedContAmount * 0.35 | number:'':'tr' }} TL<b>{{ second }}</b></p>
+        <span (click)="changeSelect($event)">%35</span>
+      </div>
+      <div class="dpcItem dpcItemthird">
+        <p class="animated flipInY" id="yuzdeonbes">{{selectedContAmount * 0.15 | number:'':'tr' }} TL<b>{{ third }}</b></p>
+        <span (click)="changeSelect($event)">%15</span>
+      </div>
+      <div class="dpcItem dpcItemfourth">
+        <p class="animated flipInY" id="yuzdeon">{{selectedContAmount * 0.10 | number:'':'tr' }} TL<b>{{ fourth }}</b></p>
+        <span (click)="changeSelect($event)">%10</span>
+      </div>
+    </div>
+    <div class="portfolioCompare animated fadeInUp delay-06s">
+      <div class="linechartlist" [innerHtml]="htmlToAdd" id="lineChart"></div>
+      <div class="chart-wrapper">
+        <canvas baseChart
+                [options]="lineChartOptions"
+                [datasets]="lineChartData"
+                [labels]="lineChartLabels"
+                [colors]="lineChartColors"
+                [chartType]="lineChartType"
+                [plugins]="lineChartPlugins">
+        </canvas>
+      </div>
+
+      <canvas class="resultGrafik" id="line-chart" style="float:left"></canvas>
+    </div>
+  </div>
+
+  <div class="dashboardContainer dcSecond">
+
+    <div class="dashboardTitle animated fadeInUp delay-1s">
+      <h2>Önerilen Sepetler</h2>
+    </div>
+    <owl-carousel-o [options]="customOptions">
+      <ng-template carouselSlide *ngFor="let item of sm.templateBaskets; let i=index">
+        <div class="item">
+          <div class="cartBox animated fadeInRight delay-15s">
+            <div class="cartName" id="sira-{{i}}" data-trigger="hover" role="button" data-content=item.explanation data-placement="top">{{i+1}}<span>SEPET</span></div>
+            <div class="cartChart">
+              <canvas baseChart id="card{{i}}" class="chart_item" width="100" height="40"
+                      [data]="dataArray[i][0]"
+                      [colors]="donutrenkler[i]"
+                      [chartType]="doughnutChartType"
+                      [options]="donuChartOptions">
+              </canvas>
+            </div>
+            <div class="verticalSliderItem">
+              <perfect-scrollbar style="max-width: 600px; max-height: 115px; margin-bottom: 30px;" [config]="">
+                <div id="_card{{i}}" class="cartList">
+
+                  <ul>
+                    <li *ngFor="let stock of sm.templateBasketStock; let k=index" id="card{{i}}_{{k}}" class="col-12">
+                      <div *ngIf="item.recordId == stock.templateBasketId">
+                        <div id="slidingtext" class="row">
+                          <div class="col-8 overflow-hidden slidetext">
+                            <span tabindex="0" data-trigger="hover" id="toggleId" data-placement="top"
+                                  class="chart-legend-label-text col-7 slidetext__content"
+                                  style="display:inline-block; text-overflow:ellipsis">
+                              <span style="white-space:nowrap;" class="marquee-text">{{symbolName(stock.symbolId)}} {{returnedData$}}</span>
+                            </span>
+                          </div>
+                          <span class="chart-legend-label-text"><b>%{{stock.perc * 100 | number:'1.0-0'}}</b></span>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </perfect-scrollbar>
+
+            </div>
+            <button class="cartButton" (click)="invest(item.recordId)" routerLink="/investment">YATIRIM YAP</button>
+            <!--  routerLink="/investment"     -->
+          </div>
+        </div>
+      </ng-template>
+    </owl-carousel-o>
+  </div>
+</div>
+<div class="pageInfoText">Burada yer alan yatırım bilgi, yorum ve tavsiyeleri "Yatırım Danışmanlığı" kapsamında değildir. Yatırım danışmanlığı hizmeti, Aracı Kurumlar, Portföy yönetim şirketleri, mevduat kabul etmeyen bankalar ile müşteri arasında imzalanacak yatırım danışmanlığı sözleşmesi çerçevesinde sunulmaktadır. Burada yer alan yorum ve tavsiyeler, yorum ve tavsiyede bulunanların kişisel görüşlerine ve/veya firma tarafından üretilen istatistik ve veri analizi programlarının çıktılarına dayanmaktdır. Bu görüşler mali durumunuz ile risk ve getiri tercihlerinize uygun olmayabilir. Bu nedenle, sadece burada yer alan bilgilere dayanılarak yatırım kararı verilmesi beklentilerinize uygun sonuçlar doğurmayabilir.</div>
+
+
+

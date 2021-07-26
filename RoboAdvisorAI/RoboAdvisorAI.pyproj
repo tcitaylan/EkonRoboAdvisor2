@@ -1,0 +1,116 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>e065b131-84df-4e17-b7ca-f4d7a30688cb</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>MainAlgorithm.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>RoboAdvisorAI</Name>
+    <RootNamespace>RoboAdvisorAI</RootNamespace>
+    <SuppressConfigureTestFrameworkPrompt>true</SuppressConfigureTestFrameworkPrompt>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="allocation\" />
+    <Folder Include="allocation\__pycache__\" />
+    <Folder Include="bulten\" />
+    <Folder Include="bulten\boot-strapcss\" />
+    <Folder Include="categorization\" />
+    <Folder Include="categorization\__pycache__\" />
+    <Folder Include="data\" />
+    <Folder Include="data\__pycache__\" />
+    <Folder Include="prediction\" />
+    <Folder Include="prediction\models\" />
+    <Folder Include="prediction\models\__pycache__\" />
+    <Folder Include="prediction\__pycache__\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="allocation\__pycache__\BlackLitterman.cpython-37.pyc" />
+    <Content Include="bulten\animate.min.css" />
+    <Content Include="bulten\boot-strapcss\bootstrap-grid.css" />
+    <Content Include="bulten\boot-strapcss\bootstrap-grid.css.map" />
+    <Content Include="bulten\boot-strapcss\bootstrap-grid.min.css" />
+    <Content Include="bulten\boot-strapcss\bootstrap-grid.min.css.map" />
+    <Content Include="bulten\boot-strapcss\bootstrap-reboot.css" />
+    <Content Include="bulten\boot-strapcss\bootstrap-reboot.css.map" />
+    <Content Include="bulten\boot-strapcss\bootstrap-reboot.min.css" />
+    <Content Include="bulten\boot-strapcss\bootstrap-reboot.min.css.map" />
+    <Content Include="bulten\boot-strapcss\bootstrap.css" />
+    <Content Include="bulten\boot-strapcss\bootstrap.css.map" />
+    <Content Include="bulten\boot-strapcss\bootstrap.min.css" />
+    <Content Include="bulten\boot-strapcss\bootstrap.min.css.map" />
+    <Content Include="bulten\chooseButton.css" />
+    <Content Include="bulten\dashboardPage.css" />
+    <Content Include="bulten\denizyatirim.jpeg" />
+    <Content Include="bulten\denizyatirimlogo.png" />
+    <Content Include="bulten\detailPage.css" />
+    <Content Include="bulten\footer.html" />
+    <Content Include="bulten\header.html" />
+    <Content Include="bulten\jquery-ui.css" />
+    <Content Include="bulten\mdb.min.css" />
+    <Content Include="bulten\NotoSans-Bold.ttf" />
+    <Content Include="bulten\NotoSans-BoldItalic.ttf" />
+    <Content Include="bulten\NotoSans-Italic.ttf" />
+    <Content Include="bulten\NotoSans-Regular - Kopya.ttf" />
+    <Content Include="bulten\NotoSans.ttf" />
+    <Content Include="bulten\PagedList.css" />
+    <Content Include="bulten\saveModal.css" />
+    <Content Include="bulten\site.css" />
+    <Content Include="bulten\yasal.html" />
+    <Content Include="categorization\__pycache__\Fuzzy.cpython-37.pyc" />
+    <Content Include="categorization\__pycache__\Linear.cpython-37.pyc" />
+    <Content Include="categorization\__pycache__\SpecialBaskets.cpython-37.pyc" />
+    <Content Include="data\__pycache__\DataAccessLayer.cpython-37.pyc" />
+    <Content Include="data\__pycache__\DataService.cpython-37.pyc" />
+    <Content Include="data\__pycache__\Preprocess.cpython-37.pyc" />
+    <Content Include="prediction\models\__pycache__\LstmClassifier.cpython-37.pyc" />
+    <Content Include="prediction\models\__pycache__\SimpleNnClassifier.cpython-37.pyc" />
+    <Content Include="prediction\__pycache__\Predicter.cpython-37.pyc" />
+    <Content Include="prediction\__pycache__\Training.cpython-37.pyc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="allocation\BlackLitterman.py" />
+    <Compile Include="Backtest.py" />
+    <Compile Include="categorization\Fuzzy.py" />
+    <Compile Include="categorization\Linear.py" />
+    <Compile Include="categorization\SpecialBaskets.py" />
+    <Compile Include="CreatePDF.py" />
+    <Compile Include="data\DataAccessLayer.py" />
+    <Compile Include="data\DataService.py" />
+    <Compile Include="data\Preprocess.py" />
+    <Compile Include="MainAlgorithm.py" />
+    <Compile Include="MainInterface.py" />
+    <Compile Include="Notifier.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="pdftest.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="prediction\models\LstmClassifier.py" />
+    <Compile Include="prediction\models\SimpleNnClassifier.py" />
+    <Compile Include="prediction\Predicter.py" />
+    <Compile Include="prediction\Training.py" />
+    <Compile Include="Settings.py" />
+    <Compile Include="Tests.py" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>

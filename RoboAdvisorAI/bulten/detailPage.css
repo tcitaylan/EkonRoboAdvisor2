@@ -1,0 +1,189 @@
+﻿@media (max-width:1200px) {
+    #searchButtonLeft {
+        width: 25% !important;
+    }
+
+    #searchText {
+        width: 60% !important;
+    }
+}
+@media (max-width: 1000px) {
+    .qa_sendBtn {
+        width: 100% !important;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    }
+
+    .qa_cancelBtn {
+        margin-left: 0 !important;
+        width: 100% !important;
+    }
+}
+@media (min-width:768px) and (max-width: 1000px) {
+    .tweetItem .left {
+        display: none !important;
+    }
+
+    .tweetItem .mid {
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+
+        .tweetItem .mid #tweetUserName {
+            display: block !important;
+            margin-left: 10px !important;
+        }
+
+    #animatedModal .container {
+        margin-top: 50px !important;
+    }
+
+    .explanationRaw {
+        display: none !important;
+    }
+
+    .fileItem .left {
+        width: 10% !important;
+    }
+
+    .fileItem .mid {
+        width: 70% !important;
+    }
+
+    .fileItem .right {
+        width: 15% !important;
+    }
+
+    #searchButtonLeft {
+        width: 34% !important;
+    }
+
+    .resultDate,.descRaw{
+        display:none !important;
+    }
+}
+
+@media (max-width: 770px) {
+    .fileItem .left {
+        width: 10% !important;
+    }
+
+    .fileItem .mid {
+        width: 70% !important;
+    }
+
+    .fileItem .right {
+        width: 14% !important; 
+    }
+
+    .speech-bubble {
+        bottom: 230px !important;
+        right: 85px !important;
+    }
+
+    .msgClose {
+        bottom: 250px !important;
+        right: 40px !important;
+    }
+
+    #robot {
+        width: 200px !important;
+    }
+
+    #animatedModal .container {
+        margin-top: 50px !important;
+    }
+
+    #searchButtonLeft {
+        width: 46% !important;
+    }
+
+    #searchText {
+        width: 48% !important;
+    }
+    .resultDate, .descRaw {
+        display: none !important;
+    }
+    #qa_symbol, #qa_title, #qa_newQuestionText {
+        width: 90% !important;
+    }
+}
+
+@media (max-width:500px) {
+    #searchButtonLeft {
+        width: 51% !important;
+    }
+
+    #searchText {
+        width: 42% !important;
+    }
+}
+
+@media (max-width: 450px) {
+    .explanationRaw {
+        display: none !important;
+    }
+
+    #topImg {
+        width: 170px !important;
+    }
+
+    .fileItem .left {
+        width: 12% !important;
+    }
+
+    .fileItem .mid {
+        width: 65% !important;
+    }
+
+    .fileItem .right {
+        width: 15% !important;
+    }
+
+    #searchButtonLeft {
+        width: 40% !important;
+    }
+
+    #searchText {
+        width: 54% !important;
+        left: 182px !important;
+    }
+}
+
+@media (max-width:400px) {
+    .tweetItem .left {
+        display: none !important;
+    }
+
+    .tweetItem .mid {
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+
+        .tweetItem .mid #tweetUserName {
+            display: block !important;
+            margin-left: 10px !important;
+        }
+
+    #searchButtonLeft {
+        width: 45% !important;
+    }
+
+    #searchText {
+        width: 49% !important;
+    }
+
+    .fileItem .left {
+        display: none !important;
+    }
+    .fileItem .mid {
+        width: 80% !important;
+        margin-left: 0 !important;
+    }
+    .fileItem .right {
+        width: 17% !important;
+    }
+    #home,#menu1,#menu2 {
+        max-height: 370px !important;
+    }
+}

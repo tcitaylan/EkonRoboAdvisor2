@@ -1,0 +1,208 @@
+.cartBoxList .owl-carousel .owl-stage-outer {
+  overflow: initial;
+}
+
+.slider .owl-carousel .owl-stage-outer {
+  overflow: initial;
+}
+
+.slide .owl-carousel .owl-stage-outer {
+  overflow: initial;
+  margin: 0 !important;
+}
+
+.cartBoxList .owl-carousel .owl-stage-outer {
+  overflow: initial;
+}
+
+.slider .owl-carousel .owl-stage-outer {
+  overflow: initial;
+}
+
+.slide .owl-carousel .owl-stage-outer {
+  overflow: initial;
+  margin: 0 !important;
+}
+
+
+div#choice-19 {
+  width: 460px;
+  height: 55px;
+  line-height: 55px;
+  font-size: 16px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  padding: 0 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+
+/* Tracing */
+
+.table th, .table td {
+  padding: 0.45rem;
+}
+
+.table td {
+  font-size: 14px;
+}
+
+.scrollbar-inner > .scroll-element.scroll-x {
+  width: 60% !important;
+  margin: 0 20%;
+}
+
+
+/* LOGİN FORM CSS*/
+
+.loginPanel {
+  width: 90%;
+  height: 450px;
+  position: relative;
+  top: 10%;
+  margin: 30px auto;
+  border-radius: 25px;
+  background: white;
+}
+
+.loginPanelTitle {
+  margin-top: 20px;
+  width: 100%;
+  height: 45px;
+  background-color: white;
+  width: 100%;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.05);
+  display: inline-block;
+}
+
+.loginİnner {
+  text-align: center;
+  margin-top: 5px;
+  position: relative;
+}
+
+span.sign-in {
+  font-family: 'DIN Pro Cond';
+  font-weight: 500;
+  font-size: 20px;
+  margin-right: 50px;
+  cursor: pointer;
+}
+
+.borderLine {
+  border-bottom: 2.5px solid #008dd6;
+}
+
+span.register {
+  font-family: 'DIN Pro Cond';
+  font-weight: 500;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.loginPanelContent {
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+
+.loginFormInput {
+  display: block;
+  width: 60%;
+  height: 50px;
+  position: relative;
+  margin: 0 auto;
+  padding-top: 15px;
+}
+
+.loginPanelForm {
+  height: 100%;
+  width: 100%;
+  border: none;
+  padding: 15px;
+  margin: 0;
+  font-size: 15px !important;
+  color: #172636 !important;
+  border-radius: 3px;
+  margin-top: 30px;
+}
+
+.loginFormButton {
+  background-color: rgb(0, 141, 214);
+  box-shadow: 0px 3px 10px 0px rgba(66, 174, 106, 0.25);
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  color: #fff !important;
+  font-size: 15px !important;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+  margin: 0 auto;
+  text-align: center;
+}
+
+span.text-primary {
+  font-size: 14px;
+}
+
+/* SURVEY CSS */
+
+input {
+  background: #f0f6f9;
+  width: 380px;
+  height: 55px;
+  line-height: 55px;
+  font-size: 16px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  padding: 0 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.error {
+  border: 2px solid #ff0000;
+}
+
+.error-container {
+  display: none;
+}
+
+.number-error {
+  display: none;
+}
+
+.required-error {
+  display: none;
+}
+
+.scaItemsValid {
+  display: block;
+}
+
+.error-container span {
+  color: #f61212 !important;
+}
+
+.surveyContainer.error {
+  border: 0;
+}
+
+  .surveyContainer.error input {
+    border: 1px solid red
+  }
+
+.owl-carousel .owl-stage-outer {
+  padding-top: 5px !important;
+}
+
+.alertify-logs .success{
+  color: white !important;
+}
+
+
+.alertify-logs .error {
+  color: white !important;
+}

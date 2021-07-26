@@ -1,0 +1,54 @@
+<div class="questionPage">
+  <div class="backgroundContainer animated fadeInLeft">
+      <ul class="bcSteps">
+        <li *ngFor="let item of questions; let i = index" id="step-{{i+1}}" 
+          [ngClass]="(i==0) ? ['step1','bcsCurrent']:['step'+(i+1)] " (click) = "stepClick($event)">{{i+1}}</li>
+      </ul>
+      <div class="bcLogo"></div>
+      <div class="bcImage bci01"></div>
+  </div>  
+      
+     <!-- extraClass = "displayB animated fadeInRight slideInRight"; -->
+    <div *ngFor="let item of questions; let i = index">
+        
+      <div id="step-{{i}}" class="surveyContainer survey{{i+1}} {{item.answerType}}" 
+        [ngClass]="(i == 0) ? ['displayB', 'animated', 'fadeInRight', 'slideInRight'] : '' "   id="s-{{i}}">
+          <div class="scQuestion">{{item.question}}</div>
+          <div class="scButton" id="rec-{{item.recordId}}" (click)="scButtonClick($event)"></div>
+
+          <div class="scAnswers">              
+            <div *ngIf="item.answerType == 'text'">
+                <input class="scaItem scaItemcustom" placeholder="{{item.question}}" type="text"
+                        style="background: #fff !important;color:black !important"
+                        id="inp1-{{item.recordId}}" (click)="answerFieldClick($event)"/>
+                <div class="error-container">
+                    <span class="text-primary font-weight-bold required-error">Bu Alan Boş Bırakılamaz</span>
+                </div>
+            </div>
+            <div *ngIf="item.answerType == 'number'">
+                <input class="scaItem" placeholder="{{item.question}}" type="number"
+                        style="background: #fff !important;color:black !important"
+                        id="inp2-{{item.recordId}}" (click)="answerFieldClick($event)"/>
+                <div class="error-container">
+                    <span class="text-primary font-weight-bold required-error">Bu Alan Boş Bırakılamaz</span>
+                    <span class="text-primary font-weight-bold number-error">Lutfen 0 dan buyuk bir sayi giriniz</span>
+                </div>
+            </div>
+            <div *ngIf="item.answerType == 'choice'">
+                <div *ngFor="let choice of item.answerProps.split(';');let j = index" >
+                    <div class="scaItem choice-select" id="choice-{{item.recordId}}" (click)="answerFieldClick($event)" attr.data-loc='{{choice}}'>
+                        <span attr.data-loc='{{choice}}' (click)="answerFieldClick($event)">{{choice}}</span>
+                    </div>
+                </div>
+            </div>
+                
+            <div class="error-container">
+                <span class="text-primary font-weight-bold required-error">Lutfen bir secim yapiniz</span>
+            </div>
+              
+          </div>
+      </div>
+    </div>
+  
+  <div id="loading"></div>
+</div>

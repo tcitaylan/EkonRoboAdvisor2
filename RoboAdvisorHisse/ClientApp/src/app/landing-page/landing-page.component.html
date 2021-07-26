@@ -1,0 +1,187 @@
+
+<div class="container" style="padding-top:0;max-width:1450px">
+  <div style="height:596px;padding:15px;background:white;border-radius: 10px;">
+    <div style="width:100%;height:90px">
+      <div>
+        <img src="..\assets\img\logoDashboard.png" style="width:350px;" />
+        <ul style="float:right;overflow:unset !important;padding: 15px;" class="menuul">
+          <li><a href="#">Anasayfa</a></li>
+          <li><a href="#">S.S.S</a></li>
+          <li><a href="#">İletişim</a></li>
+          <li><button class="regBtn"  (click)="redirect()">KAYIT OL</button></li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-md-6" style="padding-left: 60px;padding-top:80px">
+        <h3 style="color: #0162a2 !important;font-family: Calibri !important;">Yatırımlarınız için vereceğiniz</h3>
+        <h3 style="color: #0162a2 !important;font-weight:bold;font-family: Verdana !important;">EN KOLAY KARAR</h3>
+
+      </div>
+      <div class="col-md-6" style="padding:0">
+        <img src="..\assets\img\bannerpeople3.png" style="width:100%;border-radius: 10px;" />
+      </div>
+    </div>
+    <div class="row hiddenmobile">
+      <div class="col-md-1">
+
+      </div>
+      <div class="col-md-4" style="background: #0162a2;height: 300px;width: 100%;position: relative; bottom: 215px; border-radius: 10px;padding: 35px; padding-top: 10px;">
+        <ol class="featuresul">
+          <li>1. Risk ve getiri beklentinizi sisteme tanıtın.</li>
+          <li>2. Tek tuşla size uygun sepete yatırım yapın.</li>
+          <li>3. Yatırımlarınız piyasa koşullarına göre otomatik güncellensin.</li>
+          <li>4. Yatırımınızın son durumu hakkında her zaman haberdar kalın.</li>
+        </ol>
+      </div>
+      <div class="col-md-1">
+
+      </div>
+      <div class="col-md-6">
+
+      </div>
+    </div>
+  </div>
+
+  <div class="row" style="margin-top:150px;background:white;border-radius: 10px;padding: 30px 0px;" id="sssrow">
+
+    <div class="col-md-6" style="padding-left: 60px;padding-top:20px">
+      <h3 style="color: #0162a2 !important;font-family: Calibri !important;">Yatırım Sepetlerinde Neler Var ?</h3>
+      <p style="font-size: 17px;text-align:justify">Metlife Robo Advisor platformu 500'ün üzerinde farklı fonda alım satım işlemleri yapabilmektedir.</p>
+      <p style="font-size: 17px;text-align:justify">Hisse Senedi, Serbest Fonlar, Yabancı Hisse Senetleri gibi riskli yatırım fonlarının yanı sıra, gayrimenkul, kısa vadeli borçlanma araçları, tahvil ve bono gibi yüzlerce finansal enstrumanı barındıran fonlar platformda bulunmaktadır.</p>
+      <p style="font-size: 17px;text-align:justify">Metlife Robo Advisor size farklı türlerde birçok fon sepeti sunarak yatırımınızı dilediğiniz gibi değerlendirmenizi sağlar.</p>
+    </div>
+
+    <div class="col-md-6">
+      <img src="..\assets\img\dashboard.png" style="width:100%;" />
+    </div>
+  </div>
+
+
+
+  <div class="row" style="margin-top:50px;background:white;border-radius: 10px;padding: 30px 0px;">
+
+    <div class="col-md-6">
+      <img src="..\assets\img\dashboard2.png" style="width:100%;border-radius:10px" />
+
+    </div>
+
+
+    <div class="col-md-6" style="padding-left:10px;padding-top:20px;padding-right: 50px;">
+      <h3 style="color: #0162a2 !important;font-family: Calibri !important;">Yatırımlarınız Nasıl Değerlendirilir ?</h3>
+      <p style="font-size: 17px;text-align:justify">Fon sepetleri, piyasa hareketlerini ve fon fiyatlarını analiz eden yapay zeka destekli bir algoritma tarafından oluşturulur.</p>
+      <p style="font-size: 17px;text-align:justify">Sepetinizdeki fon fiyatları düşmeye başlarsa, yatırımlarınız otomatik olarak risksiz kazanç sağlayan para piyasası fonlarına yönlendirilir.</p>
+      <p style="font-size: 17px;text-align:justify">Her yapılan işlem isterseniz öncelikle sizin onayınıza sunulur. Her işlem sonunda yatırımınız hakkında mail yoluyla bilgilendirilirsiniz.</p>
+
+
+    </div>
+
+  </div>
+
+
+  <div class="row" style="margin-top:50px;background:white;border-radius: 10px;">
+
+    <div class="col-md-12" style="padding-left: 60px;padding-top:20px">
+      <h3 style="color: #0162a2 !important;font-family: Calibri !important;text-align:center">Kullanıcılarımız Ne Düşünüyor ?</h3>
+    </div>
+
+    <div class="col-md-5" style="padding:0">
+      <img src="..\assets\img\bannerpeople2.png" style="width:100%;" />
+    </div>
+    <div class="col-md-7" style="padding: 20px 50px;">
+      <owl-carousel-o [options]="customOptions1">
+        <ng-template carouselSlide>
+
+          <div>
+            <div class="commentfirst">
+              <img src="..\assets\img\ekin.png" class="personicon" />
+
+            </div>
+            <div class="commentsecond">
+              <p class="commentsecondp1">Ekin KEÇECİ</p>
+              <p class="commentsecondp2">Bilişim Sektöründe Yönetici</p>
+            </div>
+          </div>
+
+          <div>
+            <p class="commenttext">"Sıklıkla hisse senedi ve VİOP piyasasında işlem yapmaktayım. Fakat kimi zaman iş yoğunluğum sebebiyle piyasayı takip edecek zaman bulamıyordum. Bu durumdan dolayı portföyümü yeterince iyi yönetemediğimi farkettim. Metlife Robo Advisor sayesinde hoşuma giden hisse sepetlerine yatırım yaptım. Yatırımlarım ben piyasayı takip etmediğim sırada bile güncelleniyor."</p>
+          </div>
+        </ng-template>
+
+        <ng-template carouselSlide>
+          <div>
+            <div class="commentfirst">
+              <img src="..\assets\img\metehan.png" class="personicon" />
+
+            </div>
+            <div class="commentsecond">
+              <p class="commentsecondp1">Metehan BADEM</p>
+              <p class="commentsecondp2">Yazılım Mühendisi</p>
+            </div>
+          </div>
+          <div>
+            <p class="commenttext">"Birikimlerimi genellikle vadeli mevduatta veya bankamın bana sunduğu fonları satın alarak değerlendiriyordum. Bu şekilde elde ettiğim getiriler beklentimin altında kalmıştı. Şimdiyse Metlife Robo Advisor kullanıyorum. Orta riskli bir sepete yatırım yaparak hem birikimlerimi riske atmadım, hem de daha yüksek getiri elde ettim."</p>
+          </div>
+        </ng-template>
+
+        <ng-template carouselSlide>
+          <div>
+            <div class="commentfirst">
+              <img src="..\assets\img\yakup.png" class="personicon" />
+
+            </div>
+            <div class="commentsecond">
+              <p class="commentsecondp1">Yakup Yılmaz</p>
+              <p class="commentsecondp2">Otel İşletmecisi</p>
+            </div>
+          </div>
+
+          <div>
+            <p class="commenttext">"Yatırımlarımı bankaların islami fonlarını satın alarak yapıyordum. Metlife Robo Advisor'da döviz fonları ve gayri menkul fonları gibi birçok faizsiz kazanç sağlayan fon olduğunu gördüm. Şu an yatırımlarımı Metlife'ın sunduğu islami yatırım sepetlerinde değerlendiriyorum."</p>
+          </div>
+        </ng-template>
+      </owl-carousel-o>
+    </div>
+
+  </div>
+
+
+  <div class="row" style="margin-top:50px;background:white;border-radius: 10px;padding:0px 20px;padding-bottom: 30px;" id="contactrow">
+    <div class="col-md-12" style="padding-left: 60px;padding-top:20px">
+    </div>
+
+    <div class="col-md-6" style="padding-top:20px;">
+      <div style="margin:0 auto; width:380px">
+        <img src="..\assets\img\contactImage.png" style="width: 100%;margin-top:30px" />
+      </div>
+    </div>
+
+    <div class="col-md-6" style="padding-top:20px;">
+      <div style="width:100%;">
+        <h3 style="color: #0162a2 !important;font-family: Calibri !important;text-align:left">İletişim Formu</h3>
+
+        <div class="form-group">
+          <label for="exampleInputEmail1">Eposta</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Eposta giriniz">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Ad Soyad</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ad Soyad giriniz">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Mesajınız</label>
+          <textarea rows="5" type="text" class="form-control"></textarea>
+        </div>
+
+        <button (click)="sendMessage($event)" class="cartButton" tabindex="0" style="width:200px;float:right">GÖNDER</button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="pageInfoText">Burada yer alan yatırım bilgi, yorum ve tavsiyeleri "Yatırım Danışmanlığı" kapsamında değildir. Yatırım danışmanlığı hizmeti, Aracı Kurumlar, Portföy yönetim şirketleri, mevduat kabul etmeyen bankalar ile müşteri arasında imzalanacak yatırım danışmanlığı sözleşmesi çerçevesinde sunulmaktadır. Burada yer alan yorum ve tavsiyeler, yorum ve tavsiyede bulunanların kişisel görüşlerine ve/veya firma tarafından üretilen istatistik ve veri analizi programlarının çıktılarına dayanmaktdır. Bu görüşler mali durumunuz ile risk ve getiri tercihlerinize uygun olmayabilir. Bu nedenle, sadece burada yer alan bilgilere dayanılarak yatırım kararı verilmesi beklentilerinize uygun sonuçlar doğurmayabilir.</div>
+</div>
+

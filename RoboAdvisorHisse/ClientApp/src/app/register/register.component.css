@@ -1,0 +1,20 @@
+.opc {
+  opacity: 0.3;
+}
+
+.loading {
+  background: url('../../assets/img/deneme.gif') no-repeat center center;
+  position: absolute;
+  top: 5%;
+  height: 100%;
+  width: 100%;
+  z-index: 10000;
+}
+
+.show {
+  display: block !important;
+}
+
+.hide {
+  display: none !important;
+}

@@ -1,0 +1,29 @@
+<!-- SIDEBAR BEGIN -->
+<div class="mainLogo animated fadeInDown"></div>
+<div class="pdSidebar animated fadeInRight">
+  <div style="padding-left:20px !important; padding-top:20px !important;cursor:pointer"><img src="../../assets/img/logout.png" style="width:30px;" (click)="logOut()" /></div>
+  <div class="sidebarName" style="margin-top:12px !important; margin-bottom:24px !important">
+    <h2>{{userMod?.nameSurname}}</h2>
+    <h4 class="userCategory" data-trigger="hover" role="button" data-content="" data-placement="top">{{userMod?.userResult?.category?.categoryName}}</h4>
+    <select id="contracts" class="form-control" #contractSelect (change)="changeSelect(contractSelect.value)">
+      <option value="null">Seçiniz...</option>
+      <option *ngFor="let item of contracts" [value]="item.value + '_' + item.id" [id]="'c_' + item.id">{{item.name}}</option>
+    </select>
+  </div>
+  <!--<ul class="sidebarCircles">
+    <li class="scScore"><span class="sidebarLi" data-trigger="hover" role="button" data-content="Anket sonucunuza göre skorunuz" data-placement="top"><b>%</b>{{userMod?.userResult?.userScore}}</span></li>
+    <li class="scSurvey"><span class="sidebarLi" data-trigger="hover" role="button" data-content="Yıl içerisinde kalan dağılım değiştirme hakkınız" data-placement="top"><b id="left_rebalance">6</b></span></li>
+
+    <!-- <li class="scRank"><span class="sidebarLi" data-trigger="hover" role="button" data-content="kategoridef" data-placement="top"><img src="{{image}}"></span></li> 
+
+    <li class="scRank"><span class="sidebarLi" data-trigger="hover" role="button" data-content="turkay" data-placement="top"><img src="../../assets/img/trophy.png" alt=""></span></li>
+
+
+  </ul>-->
+  
+  <div class="sidebarLetter">{{userMod?.nameSurname?.split(" ")[0].charAt(0)}}{{userMod?.nameSurname?.split(" ")[1].charAt(0)}}</div>
+  <div class="sidebarCharacter">
+    <img src="./assets/img/dashboardImageA.png" alt="">
+  </div>
+</div>
+<!-- SIDEBAR FIN -->

@@ -1,0 +1,114 @@
+<!-- CONTAINER BEGIN -->
+<div class="pdContainer">
+  <div class="dashboardContainer">
+    <div class="dashboardTitle">
+      <h2>Portföy İzleme ({{wm.basket?.name}})</h2>
+      <span>Toplam Birikiminiz: <b>{{lastbalance | number:'1.0-0':'tr' }}</b> <b>TL</b></span>
+    </div>
+  </div>
+
+  <owl-carousel-o [options]="">
+    <ng-container *ngFor="let item of wm.assets; let i=index">
+      <ng-template carouselSlide>
+        <ul class="portfolioShare animated delay-1s img-responsive owlheight">
+          <li class='animated fadeInRight delay-{{i}}s marginreduce'>
+            <div>
+              <span><b>%</b>{{perc(item.totalAmount)}}</span>
+              <p>{{item.totalAmount | number:'1.0-0':'tr'}}<b>₺</b></p>
+              <div id="slidingtext" class="row">
+                <div class=" overflow-hidden slidetext">
+                  <i class="col-12"
+                     style="display:inline-block; text-overflow:ellipsis; white-space: nowrap; padding-left:55px">
+                    {{item.name}}
+                  </i>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </ng-template>
+    </ng-container>
+  </owl-carousel-o>
+
+  <div class="dashboardTimeline animated fadeIn delay-012s">
+    <span>
+      <i class="animated bounceIn delay-1s"><img src="../../assets/img/timelineIcon-01.png" alt=""></i>
+
+      <p class="animated bounceIn delay-1s">{{wm.registerDate}}<b>tarihinde tanıştık</b></p>
+
+
+      <strong class="animated fadeIn delay-3s"><u></u></strong>
+    </span>
+    <span>
+      <i class="animated bounceIn delay-2s"><img src="../../assets/img/timelineIcon-02.png" alt=""></i>
+      <p class="animated bounceIn delay-2s">{{wm.surveyDate}} gündür<b>birlikte güçlüyüz</b></p>
+      <strong class="animated fadeIn delay-4s"><u></u></strong>
+    </span>
+    <span>
+      <i class="animated bounceIn delay-3s"><img src="../../assets/img/timelineIcon-03.png" alt=""></i>
+      <p class="animated bounceIn delay-3s">{{firstbalance}} TL<b>ile başladın</b></p>
+      <strong class="animated fadeIn delay-5s"><u></u></strong>
+    </span>
+    <span>
+      <i class="animated bounceIn delay-4s"><img src="../../assets/img/timelineIcon-04.png" alt=""></i>
+      <p class="animated bounceIn delay-4s">{{lastbalance}} TL<b>oldu şimdiden</b></p>
+      <strong class="animated fadeIn delay-6s"><u></u></strong>
+    </span>
+    <span>
+      <i class="animated bounceIn delay-5s"><img src="../../assets/img/timelineIcon-05.png" alt=""></i>
+      <p class="animated bounceIn delay-5s">{{wm.loginCount}} defa<b>ziyaret ettin</b></p>
+      <strong class="animated fadeIn delay-7s"><u></u></strong>
+    </span>
+    <span>
+      <i class="animated bounceIn delay-6s"><img src="../../assets/img/timelineIcon-06.png" alt=""></i>
+      <p class="animated bounceIn delay-6s">{{365 - wm.surveyDate}} gün sonra<b>tekrar ankete katılabilirsin</b></p>
+    </span>
+  </div>
+
+  <div class="dashboardContainer animated fadeInUp delay-1s tracingGrafikizleme" style="margin-top:25px">
+    <!--<div class="dashboardTitle animated fadeInUp">
+
+    </div>-->
+
+    <div class="tracingrafik" style="margin-top:0 !important">
+      <div class="linechartlist" id="lineChart" align="right" style="margin-top:-30px"></div>
+      <!--<div class="graph" id="line-chart" >-->
+      <canvas baseChart class="resultGrafik graph"
+              [options]="lineChartOptions"
+              [datasets]="lineChartData"
+              [labels]="lineChartLabels"
+              [colors]="lineChartColors"
+              [chartType]="lineChartType"
+              [plugins]="lineChartPlugins">
+      </canvas>
+    </div>
+
+    <div class="dashboardContainer animated fadeInUp delay-2s generalislemler">
+      <div class="dashboardTitle animated fadeInUp">
+        <h2>İşlemler</h2>
+        <div class="tableİslemler">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col" style="width:50%">Tarih</th>
+                <th scope="col">İşlem</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{{wm.basket?.recordDate}}</td>
+                <td>{{wm.basket?.name}} sepeti alındı.</td>
+              </tr>
+            </tbody>
+
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="pageInfoText">Burada yer alan yatırım bilgi, yorum ve tavsiyeleri "Yatırım Danışmanlığı" kapsamında değildir. Yatırım danışmanlığı hizmeti, Aracı Kurumlar, Portföy yönetim şirketleri, mevduat kabul etmeyen bankalar ile müşteri arasında imzalanacak yatırım danışmanlığı sözleşmesi çerçevesinde sunulmaktadır. Burada yer alan yorum ve tavsiyeler, yorum ve tavsiyede bulunanların kişisel görüşlerine ve/veya firma tarafından üretilen istatistik ve veri analizi programlarının çıktılarına dayanmaktdır. Bu görüşler mali durumunuz ile risk ve getiri tercihlerinize uygun olmayabilir. Bu nedenle, sadece burada yer alan bilgilere dayanılarak yatırım kararı verilmesi beklentilerinize uygun sonuçlar doğurmayabilir.</div>
+
+</div>
+
+

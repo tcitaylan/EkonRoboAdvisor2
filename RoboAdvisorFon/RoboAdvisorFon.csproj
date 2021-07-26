@@ -1,0 +1,136 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
+    <IsPackable>false</IsPackable>
+    <SpaRoot>ClientApp\</SpaRoot>
+    <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
+
+    <!-- Set this to true if you enable server-side prerendering -->
+    <BuildServerSideRenderer>false</BuildServerSideRenderer>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Don't publish the SPA source files, but do show them in the project files list -->
+    <Content Remove="$(SpaRoot)**" />
+    <None Remove="$(SpaRoot)**" />
+    <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="ClientApp\node_modules\alertify.js\bower.json" />
+    <Content Include="ClientApp\node_modules\alertify.js\dist\css\alertify.css" />
+    <Content Include="ClientApp\node_modules\alertify.js\package.json" />
+    <Content Include="ClientApp\node_modules\alertify.js\src\css\alertify.css" />
+    <Content Include="ClientApp\node_modules\alertify.js\src\templates\alert.html" />
+    <Content Include="ClientApp\node_modules\alertify.js\src\templates\confirm.html" />
+    <Content Include="ClientApp\node_modules\alertify.js\src\templates\log.html" />
+    <Content Include="ClientApp\node_modules\alertify.js\src\templates\prompt.html" />
+    <Content Include="ClientApp\node_modules\alertify.js\update.json" />
+    <Content Include="ClientApp\node_modules\alertify.js\website\404.html" />
+    <Content Include="ClientApp\node_modules\alertify.js\website\angular.html" />
+    <Content Include="ClientApp\node_modules\alertify.js\website\bootstrap.html" />
+    <Content Include="ClientApp\node_modules\alertify.js\website\css\styles.css" />
+    <Content Include="ClientApp\node_modules\alertify.js\website\css\styles.min.css" />
+    <Content Include="ClientApp\node_modules\alertify.js\website\demo.html" />
+    <Content Include="ClientApp\node_modules\alertify.js\website\fonts\MaterialIcons-Regular.eot" />
+    <Content Include="ClientApp\node_modules\alertify.js\website\fonts\MaterialIcons-Regular.ttf" />
+    <Content Include="ClientApp\node_modules\alertify.js\website\fonts\MaterialIcons-Regular.woff" />
+    <Content Include="ClientApp\node_modules\alertify.js\website\fonts\Roboto-Light.eot" />
+    <Content Include="ClientApp\node_modules\alertify.js\website\fonts\Roboto-Light.ttf" />
+    <Content Include="ClientApp\node_modules\alertify.js\website\fonts\Roboto-Light.woff" />
+    <Content Include="ClientApp\node_modules\alertify.js\website\images\transparent.jpg" />
+    <Content Include="ClientApp\node_modules\alertify.js\website\index.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Helpers\Helpers.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ClientApp\src\assets\img\Icons\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="ClientApp\node_modules\alertify.js\.codeclimate.yml" />
+    <None Include="ClientApp\node_modules\alertify.js\.coveralls.yml" />
+    <None Include="ClientApp\node_modules\alertify.js\.eslintrc" />
+    <None Include="ClientApp\node_modules\alertify.js\.npmignore" />
+    <None Include="ClientApp\node_modules\alertify.js\.snyk" />
+    <None Include="ClientApp\node_modules\alertify.js\CHANGELOG.md" />
+    <None Include="ClientApp\node_modules\alertify.js\CONTRIBUTING.md" />
+    <None Include="ClientApp\node_modules\alertify.js\dist\js\alertify.js" />
+    <None Include="ClientApp\node_modules\alertify.js\dist\js\ngAlertify.js" />
+    <None Include="ClientApp\node_modules\alertify.js\gulpfile.js" />
+    <None Include="ClientApp\node_modules\alertify.js\ISSUE_TEMPLATE" />
+    <None Include="ClientApp\node_modules\alertify.js\karma-ci.conf.js" />
+    <None Include="ClientApp\node_modules\alertify.js\karma.conf.js" />
+    <None Include="ClientApp\node_modules\alertify.js\LICENSE.md" />
+    <None Include="ClientApp\node_modules\alertify.js\README.md" />
+    <None Include="ClientApp\node_modules\alertify.js\src\js\alertify.js" />
+    <None Include="ClientApp\node_modules\alertify.js\src\js\ngAlertify.js" />
+    <None Include="ClientApp\node_modules\alertify.js\src\sass\alertify.scss" />
+    <None Include="ClientApp\node_modules\alertify.js\src\ts\alertify.js" />
+    <None Include="ClientApp\node_modules\alertify.js\src\ts\alertify.js.map" />
+    <None Include="ClientApp\node_modules\alertify.js\test\commonjsSpec.js" />
+    <None Include="ClientApp\node_modules\alertify.js\test\dialogSpec.js" />
+    <None Include="ClientApp\node_modules\alertify.js\test\logSpec.js" />
+    <None Include="ClientApp\node_modules\alertify.js\test\ngAlertifySpec.js" />
+    <None Include="ClientApp\node_modules\alertify.js\test\settingsSpec.js" />
+    <None Include="ClientApp\node_modules\alertify.js\test\themesSpec.js" />
+    <None Include="ClientApp\node_modules\alertify.js\website\fonts\MaterialIcons-Regular.woff2" />
+    <None Include="ClientApp\node_modules\alertify.js\website\fonts\Roboto-Light.svg" />
+    <None Include="ClientApp\node_modules\alertify.js\website\fonts\Roboto-Light.woff2" />
+    <None Include="ClientApp\node_modules\alertify.js\website\js\all.js" />
+    <None Include="ClientApp\node_modules\alertify.js\website\js\demo.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\node_modules\alertify.js\alertify-js.d.ts" />
+    <TypeScriptCompile Include="ClientApp\node_modules\alertify.js\src\ts\alertfy2.ts" />
+  </ItemGroup>
+
+  <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
+    <!-- Ensure Node.js is installed -->
+    <Exec Command="node --version" ContinueOnError="true">
+      <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
+    </Exec>
+    <Error Condition="'$(ErrorCode)' != '0'" Text="Node.js is required to build and run this project. To continue, please install Node.js from https://nodejs.org/, and then restart your command prompt or IDE." />
+    <Message Importance="high" Text="Restoring dependencies using 'npm'. This may take several minutes..." />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+  </Target>
+
+  <Target Name="PublishRunWebpack" AfterTargets="ComputeFilesToPublish">
+    <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build -- --prod" />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build:ssr -- --prod" Condition=" '$(BuildServerSideRenderer)' == 'true' " />
+
+    <!-- Include the newly-built files in the publish output -->
+    <ItemGroup>
+      <DistFiles Include="$(SpaRoot)dist\**; $(SpaRoot)dist-server\**" />
+      <DistFiles Include="$(SpaRoot)node_modules\**" Condition="'$(BuildServerSideRenderer)' == 'true'" />
+      <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
+        <RelativePath>%(DistFiles.Identity)</RelativePath>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      </ResolvedFileToPublish>
+    </ItemGroup>
+  </Target>
+
+  <ProjectExtensions><VisualStudio><UserProperties clientapp_4node_3modules_4alertify_1js_4package_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
+</Project>
