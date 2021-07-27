@@ -42,7 +42,7 @@ export class SurveyresultComponent implements OnInit {
   datadate: any[] = [];
 
   color: string;
-  cizgirenkler = ['#000', '#fda31c', '#0f75e6', '#f20000', '#4fc791', '#ff00ff', '#4f90c7', '#F2B46F', '#4fbec7', '#e3e30b', '#9933ff'];
+  cizgirenkler = ['#fda31c', '#0f75e6', '#f20000', '#4fc791', '#ff00ff', '#4f90c7', '#F2B46F', '#4fbec7', '#e3e30b', '#9933ff'];
   donutrenkler = [[
     {
       backgroundColor:
@@ -105,9 +105,9 @@ export class SurveyresultComponent implements OnInit {
     legend: {
       display: false
     },
-    series: {
-      0: { lineDashStyle: [4, 1] }
-    },
+    //series: {
+    //  0: { lineDashStyle: [4, 1] }
+    //},
     animation: {
       duration: 1000,
     },
@@ -154,8 +154,8 @@ export class SurveyresultComponent implements OnInit {
     , public contractService: ContractsService, private render: Renderer2) { }
 
   ngOnInit() {
-    console.log("Page started Locale disabled");
-        //registerLocaleData(tr);
+    
+        registerLocaleData(tr);
         this.getWebSiteModel(this.auth.uid.toString());
         this.selectedContAmount = this.contractService.contractAmount;
         this.selectedContId = this.contractService.contractId;
@@ -172,8 +172,7 @@ export class SurveyresultComponent implements OnInit {
     }
     
     getWebSiteModel(uidf: string) {
-      var t = environment.apiUrl + '/website/GetWebSiteModel/' + uidf;
-      console.log(t);
+      
         this.http
             .get(environment.apiUrl + '/website/GetWebSiteModel/' + uidf)
             .subscribe(
@@ -193,30 +192,30 @@ export class SurveyresultComponent implements OnInit {
 
                     /** Linechart  */
                     /** Date Labels */
-                const dateArray: string[] = [];
-                console.log("BT1:");
-                console.log(this.sm.backTest[1]);
-                console.log("BT2:");
-                console.log(this.sm.backTest[2]);
-                    this.sm.backTest[2].date.forEach(element => {
-                      dateArray.push(this.formatDate(element));                      
-                    });
-                this.lineChartLabels = dateArray.reverse();
-                console.log("LINE CHART LABELS");
-                console.log(this.lineChartLabels);
+                    const dateArray: string[] = [];
+                    //console.log("BT1:");
+                    //console.log(this.sm.backTest[1]);
+                    //console.log("BT2:");
+                    //console.log(this.sm.backTest[2]);
+                        this.sm.backTest[1].date.forEach(element => {
+                          dateArray.push(this.formatDate(element));                      
+                        });
+                    this.lineChartLabels = dateArray.reverse();
+                    console.log("LINE CHART LABELS");
+                    console.log(this.lineChartLabels);
                     /** eof Date Labels */
                     let i = 0;
                     this.sm.backTest.forEach(element => {
                         for (let x = 0; x < element.data.length; x++) {
                             element.data[x] = element.data[x].toFixed(2);
-                        }
-
+                      }
+                      
             if (i === 0) {
               this.lineChartData.push({
                 data: element.data.reverse(),
                 label: element.basketname,
                 borderColor: this.cizgirenkler[i],
-                borderDash: [10, 2],
+                //borderDash: [10, 2],
                 backgroundColor: this.cizgirenkler[i],
                 fill: false
               });
@@ -265,7 +264,6 @@ export class SurveyresultComponent implements OnInit {
 
           /** Donut Chart */
           for (let k = 0; k < this.sm.templateBaskets.length; k++) {
-            // this.doughnutChartLabels[k] = 'taylan';
             let d: MultiDataSet = [[]];
             let ls: string[] = [];
 

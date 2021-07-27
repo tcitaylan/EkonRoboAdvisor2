@@ -4,44 +4,44 @@
 @import '../../assets/css/owl.carousel.css';
 
 
-.c0 {
+/*.c0 {
   color: #000 !important;
   border-color: #000;
-}
+}*/
 
-.c1 {
+.c0 {
     color:#fda31c !important; 
     border-color:#fda31c;
 }
-.c2 {
+.c1 {
     color:#0f75e6 !important; 
     border-color:#0f75e6;
 }
-.c3 {
+.c2 {
     color:#f20000 !important; 
     border-color:#f20000;
 }
-.c4 {
+.c3 {
     color:#4fc791 !important; 
     border-color:#4fc791;
 }
-.c5 {
+.c4 {
     color:#ff00ff !important; 
     border-color:#ff00ff;
 }
-.c6 {
+.c5 {
     color:#4f90c7 !important; 
     border-color:#4f90c7;
 }
-.c7 {
+.c6 {
     color:#F2B46F !important; 
     border-color:#F2B46F;
 }
-.c8 {
+.c7 {
     color:#4fbec7 !important; 
     border-color:#4fbec7;
 }
-.c9 {
+.c8 {
     color:#9933ff !important; 
     border-color:#9933ff;
 }

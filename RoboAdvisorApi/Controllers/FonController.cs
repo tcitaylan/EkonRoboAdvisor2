@@ -56,8 +56,10 @@ namespace RoboAdvisorApi.Controllers
                     .Where(x => x.RecordDate == _context.TemplateBaskets.Min(z => z.RecordDate))
                     .ToListAsync();
 
+                var basketsforreal = await _context.TemplateBaskets.Where(c => returncategories.Contains(c.RecordId)).Where(x => x.RecordDate > DateTime.Today).ToListAsync();
+                if(basketsforreal.Count == 0)
+                    basketsforreal = await _context.TemplateBaskets.Where(c => returncategories.Contains(c.RecordId)).Where(x => x.RecordDate > DateTime.Today.AddDays(-1)).ToListAsync();
 
-                var basketsforreal = await _context.TemplateBaskets.Where(c => returncategories.Contains(c.RecordId)).OrderByDescending(x => x.RecordDate).Take(3).ToListAsync();
 
                 baskets.AddRange(basketsforreal);
 
@@ -74,6 +76,7 @@ namespace RoboAdvisorApi.Controllers
                             continue;
                         }
                         dynamic results = JsonConvert.DeserializeObject(backtest.Result);
+                        var taq = results[0].Balance;
                         List<double> data = new List<double>();
                         List<DateTime> date = new List<DateTime>();
                         var i = 0;
@@ -88,6 +91,15 @@ namespace RoboAdvisorApi.Controllers
                                     data.Add(result.Balance.Value);
                                     date.Add(Convert.ToDateTime(result.Date.Value));
                                 }
+                            }
+                        }
+                        if (data[0] > 10000)
+                        {
+                            var diff = data[0] - 10000;
+                            for (
+                                int ij = 0; ij < data.Count; ij++)
+                            {
+                                data[ij] = data[ij] - diff;
                             }
                         }
                         data.Reverse();
@@ -122,13 +134,14 @@ namespace RoboAdvisorApi.Controllers
                 List<double> datausd = new List<double>();
                 List<DateTime> dateusd = new List<DateTime>();
                 double base1 = 10000 / usdtry[0].close.Value;
+                //var usdiff = base1 - 10000;
                 foreach (var d in usdtry)
                 {
                     if (DateTime.Now.AddYears(-1) <= Convert.ToDateTime(DateTime.Now))
                     {
                         Console.WriteLine(d);
                         j++;
-                        if (j % 5 == 0)
+                        if (j % 5 == 0) //5 idi
                         {
                             datausd.Add(base1 * d.close.Value);
                             Console.WriteLine(d.date.Value);
@@ -221,7 +234,7 @@ namespace RoboAdvisorApi.Controllers
                 ex.SymbolId = new List<int> { 100, 121, 162, 133 };
                 ex.SymbolName = new List<string> { "HSBC PORTFÖY ÇOKLU VARLIK İKINCI DEĞIŞKEN FON", "KT PORTFÖY BİRİNCİ KATILIM FONU", "İŞ PORTFÖY EMTIA YABANCI BYF FON SEPETI FONU", "OYAK PORTFÖY İKİNCİ DEĞİŞKEN FON" };
                 ex.SymPercentage = new List<double> { };
-                backtestler[0].Basketname = "Mevcut Porföyünüz";
+                //backtestler[0].Basketname = "Mevcut Porföyünüz";
 
                 var contract = await _context.UserBaskets.Where(c => c.UserId == userid).ToListAsync();
 
