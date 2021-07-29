@@ -197,7 +197,7 @@ export class SurveyresultComponent implements OnInit {
                     //console.log(this.sm.backTest[1]);
                     //console.log("BT2:");
                     //console.log(this.sm.backTest[2]);
-                        this.sm.backTest[1].date.forEach(element => {
+                        this.sm.backTest[0].date.forEach(element => {
                           dateArray.push(this.formatDate(element));                      
                         });
                     this.lineChartLabels = dateArray.reverse();
